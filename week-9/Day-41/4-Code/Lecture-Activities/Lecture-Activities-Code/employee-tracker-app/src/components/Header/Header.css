@@ -1,0 +1,60 @@
+/* MAIN HEADER CONTAINER */
+.header {
+  display: flex; /* puts left section + nav on same row */
+  justify-content: space-between; /* pushes left content and nav apart */
+  align-items: center; /* vertically centers everything */
+  padding: 16px 32px; /* space inside header */
+  background: #111827; /* dark modern dashboard background */
+  color: #ffffff; /* default text color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle depth/shadow */
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif; /* clean modern font stack */
+  border-radius: 0 0 12px 12px; /* rounded bottom corners for modern look */
+}
+
+/* LEFT SIDE (TITLE + WELCOME TEXT GROUP) */
+.left {
+  display: flex; /* stack h1 and p vertically */
+  flex-direction: column; /* vertical layout */
+}
+
+/* MAIN TITLE */
+.left h1 {
+  font-size: 20px; /* readable but not too large */
+  margin: 0; /* removes default spacing */
+  color: #e5e7eb; /* soft white for better contrast */
+  letter-spacing: 0.5px; /* slight spacing for modern look */
+}
+
+/* WELCOME TEXT */
+.left p {
+  margin: 4px 0 0; /* small space above, no side spacing */
+  font-size: 13px; /* smaller than title for hierarchy */
+  color: #cbd5e1; /* muted gray-blue for secondary text */
+}
+
+/* NAVIGATION WRAPPER */
+.header nav {
+  display: flex; /* places links in a row */
+  gap: 16px; /* spacing between links */
+}
+
+/* NAVIGATION LINKS */
+.header nav a {
+  color: #e5e7eb; /* light text color */
+  text-decoration: none; /* removes underline */
+  font-size: 14px; /* readable link size */
+  padding: 6px 10px; /* clickable area */
+  border-radius: 6px; /* soft rounded corners */
+  transition: all 0.2s ease; /* smooth hover effect */
+}
+
+/* NAV HOVER EFFECT */
+.header nav a:hover {
+  background: rgba(255, 255, 255, 0.1); /* subtle highlight */
+  color: #ffffff; /* brighter text on hover */
+}
