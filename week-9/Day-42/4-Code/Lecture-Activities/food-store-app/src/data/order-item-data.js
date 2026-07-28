@@ -1,0 +1,58 @@
+export const orderData = [
+  {
+    id: 1,
+    itemName: "Hat",
+    quantity: 4,
+    price: 15.99,
+    specialInstructions: "Only sizes 6-7 1/2 are available",
+  },
+  {
+    id: 2,
+    itemName: "chair",
+    quantity: 41,
+    price: 151.99,
+    specialInstructions: "Sit at own risk",
+  },
+  {
+    id: 3,
+    itemName: "gloves",
+    quantity: 8,
+    price: 9.99,
+    specialInstructions: "tight in fit",
+  },
+  {
+    id: 4,
+    itemName: "sock",
+    quantity: 15,
+    price: 2.99,
+    specialInstructions: "Only one per purcahses - NO PAIRS",
+  },
+  {
+    id: 5,
+    itemName: " Bowl Hat",
+    quantity: 12,
+    price: 51.99,
+    specialInstructions: "Only sizes 6-7 1/2 are available",
+  },
+  {
+    id: 6,
+    itemName: "SeaSaw",
+    quantity: 47,
+    price: 162.99,
+    specialInstructions: "Saw the Sea",
+  },
+  {
+    id: 7,
+    itemName: "Cowboy Hat",
+    quantity: 36,
+    price: 42.99,
+    specialInstructions: "Only sizes 6-7 1/2 are available",
+  },
+  {
+    id: 8,
+    itemName: "Motorbike Hat",
+    quantity: 72,
+    price: 74.99,
+    specialInstructions: "Signed by our one king Marc Marques",
+  },
+];

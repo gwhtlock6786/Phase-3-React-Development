@@ -1,0 +1,10 @@
+.calendar-grid {
+  display: grid;
+
+  /* 7-day week layout */
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 1rem;
+
+  align-items: start;
+}

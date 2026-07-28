@@ -1,0 +1,46 @@
+.order-card {
+  width: 100%;
+  max-width: 260px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  text-align: left;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.order-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.order-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.order-card p:nth-of-type(2) {
+  font-weight: 600;
+  color: #111827;
+}

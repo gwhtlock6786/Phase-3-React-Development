@@ -1,0 +1,32 @@
+.menu-item-list {
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+
+  background-color: #fff7ed; /* warm menu section tone */
+  border-radius: 18px;
+
+  border: 1px solid #f3e2c7;
+}
+
+.menu-item-list h2 {
+  margin-bottom: 0.5rem;
+  color: #7c2d12; /* warm dark accent */
+  font-size: 1.6rem;
+}
+
+.menu-item-list hr {
+  margin-bottom: 1.5rem;
+  border: none;
+  height: 1px;
+  background-color: #e7d3b0;
+}
+
+/* GRID */
+.menu-item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}

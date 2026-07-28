@@ -1,0 +1,47 @@
+.shift-card {
+  background-color: #f9fafb;
+
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #3b82f6;
+
+  border-radius: 8px;
+
+  padding: 0.5rem 0.75rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.shift-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.shift-employee {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.shift-position {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.shift-time {
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.shift-card.manager {
+  border-left-color: #f59e0b;
+}
+
+.shift-card.cashier {
+  border-left-color: #10b981;
+}

@@ -1,0 +1,46 @@
+.employee-card {
+  background-color: rgb(160, 155, 155);
+  color: white;
+  border: 1px solid #dce5dc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 8px;
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cert-badge {
+  background-color: rgb(174, 221, 174);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.cert-badge:hover {
+  background-color: rgb(160, 155, 155);
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
