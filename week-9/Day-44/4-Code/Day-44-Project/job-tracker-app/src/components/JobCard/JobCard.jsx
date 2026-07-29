@@ -1,6 +1,6 @@
 import "./JobCard.css";
 
-const JobCard = ({ company, position, name, salary, hireDate }) => {
+const JobCard = ({ company, position, name, salary, status, statusDate }) => {
   return (
     <article className="job-card">
       <h2>{name}</h2>
@@ -21,8 +21,13 @@ const JobCard = ({ company, position, name, salary, hireDate }) => {
       </p>
 
       <p>
-        <strong>Hire Date</strong>
-        <span>{new Date(hireDate).toLocaleDateString()}</span>
+        <strong>Status</strong>
+        <span>{status}</span>
+      </p>
+
+      <p>
+        <strong>Status Date</strong>
+        <span>{new Date(statusDate).toLocaleDateString()}</span>
       </p>
     </article>
   );

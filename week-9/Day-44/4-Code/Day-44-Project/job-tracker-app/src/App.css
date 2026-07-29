@@ -1,0 +1,44 @@
+/* ==========================
+   Professional Divider
+========================== */
+
+hr {
+  width: 80%;
+
+  margin: 2.5rem auto;
+
+  border: none;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+
+  position: relative;
+}
+
+/* Optional glow effect */
+
+hr::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 120px;
+  height: 4px;
+
+  transform: translate(-50%, -50%);
+
+  background: var(--button-gradient);
+
+  border-radius: 999px;
+
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+}

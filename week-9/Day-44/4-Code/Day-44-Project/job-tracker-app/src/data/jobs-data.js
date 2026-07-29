@@ -5,7 +5,8 @@ const jobs = [
     position: "Frontend Developer",
     name: "Alice Johnson",
     salary: 125000,
-    hireDate: "2023-04-15",
+    status: "Applied",
+    statusDate: "2023-04-15",
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const jobs = [
     position: "Backend Developer",
     name: "Brian Smith",
     salary: 118000,
-    hireDate: "2022-11-03",
+    status: "Interviewing",
+    statusDate: "2022-11-03",
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ const jobs = [
     position: "Full Stack Developer",
     name: "Carla Martinez",
     salary: 132500,
-    hireDate: "2021-09-20",
+    status: "Offer",
+    statusDate: "2021-09-20",
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ const jobs = [
     position: "Software Engineer",
     name: "Daniel Brown",
     salary: 145000,
-    hireDate: "2020-06-08",
+    status: "Applied",
+    statusDate: "2020-06-08",
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ const jobs = [
     position: "UI Developer",
     name: "Emily Davis",
     salary: 121000,
-    hireDate: "2024-01-12",
+    status: "Interviewing",
+    statusDate: "2024-01-12",
   },
   {
     id: 6,
@@ -45,7 +50,8 @@ const jobs = [
     position: "React Developer",
     name: "Frank Wilson",
     salary: 128000,
-    hireDate: "2022-08-18",
+    status: "Offer",
+    statusDate: "2022-08-18",
   },
   {
     id: 7,
@@ -53,7 +59,8 @@ const jobs = [
     position: "MERN Stack Developer",
     name: "Grace Lee",
     salary: 139000,
-    hireDate: "2023-02-27",
+    status: "Applied",
+    statusDate: "2023-02-27",
   },
   {
     id: 8,
@@ -61,7 +68,8 @@ const jobs = [
     position: "Cloud Engineer",
     name: "Henry Taylor",
     salary: 116000,
-    hireDate: "2021-12-01",
+    status: "Offer",
+    statusDate: "2021-12-01",
   },
   {
     id: 9,
@@ -69,7 +77,8 @@ const jobs = [
     position: "Java Developer",
     name: "Isabella Moore",
     salary: 110500,
-    hireDate: "2020-10-14",
+    status: "Interviewing",
+    statusDate: "2020-10-14",
   },
   {
     id: 10,
@@ -77,7 +86,8 @@ const jobs = [
     position: "Software Developer",
     name: "James Anderson",
     salary: 127500,
-    hireDate: "2024-05-06",
+    status: "Applied",
+    statusDate: "2024-05-06",
   },
 ];
 
