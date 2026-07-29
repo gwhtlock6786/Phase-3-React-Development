@@ -1,0 +1,115 @@
+/* ==========================================
+   Job Card Styles
+========================================== */
+
+.job-card {
+  background: linear-gradient(145deg, #ffffff, #f4f8ff);
+  border: 1px solid #d6e4ff;
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blue accent bar across the top */
+.job-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 16px;
+
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #06b6d4);
+}
+
+/* Lift card when hovering */
+.job-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 22px 45px rgba(37, 99, 235, 0.2);
+}
+
+/* ==========================================
+   Employee Name
+========================================== */
+
+.job-card h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.7rem;
+  color: #1e3a8a;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 0.6rem;
+}
+
+/* ==========================================
+   Paragraph Styling
+========================================== */
+
+.job-card p {
+  margin: 0.85rem 0;
+  font-size: 1rem;
+  color: #4b5563;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Labels */
+.job-card strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* ==========================================
+   Salary Highlight
+========================================== */
+
+.job-card p:nth-of-type(3) {
+  color: #059669;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* ==========================================
+   Hire Date
+========================================== */
+
+.job-card p:last-child {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+  .job-card {
+    padding: 1.4rem;
+  }
+
+  .job-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .job-card p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+.job-card span {
+  color: #374151;
+  font-weight: 500;
+}
+
+.job-card p:nth-of-type(3) span {
+  color: #059669;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
