@@ -1,0 +1,67 @@
+/* ==========================
+   Table Section
+========================== */
+
+.table-section {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 2rem auto;
+}
+
+/* ==========================
+   Table
+========================== */
+
+.table-section table {
+  width: 90%;
+
+  max-width: 1000px;
+
+  background: white;
+
+  border-collapse: collapse;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   Table Header
+========================== */
+
+.table-section thead {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+
+  color: white;
+}
+
+.table-section th {
+  padding: 1rem;
+
+  text-align: left;
+
+  font-size: 1rem;
+
+  letter-spacing: 1px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 800px) {
+  .table-section {
+    overflow-x: auto;
+  }
+
+  .table-section table {
+    width: 700px;
+  }
+}
