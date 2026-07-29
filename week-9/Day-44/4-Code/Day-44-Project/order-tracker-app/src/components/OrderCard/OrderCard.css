@@ -1,0 +1,105 @@
+/* ==========================
+   Order Card
+========================== */
+
+.order-card {
+  background: #fafafa;
+
+  padding: 1.25rem;
+
+  border-radius: 14px;
+
+  border-left: 6px solid #f39c12;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  transition: 0.25s ease;
+}
+
+/* Hover */
+
+.order-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.order-card h4 {
+  margin-top: 0;
+
+  color: #34495e;
+
+  font-size: 1.2rem;
+}
+
+/* ==========================
+   Text
+========================== */
+
+.order-card p {
+  margin: 0.6rem 0;
+
+  color: #475569;
+}
+
+.order-total {
+  font-size: 1.4rem;
+
+  font-weight: 700;
+
+  color: #16a34a !important;
+}
+
+/* ==========================
+   Complete Button
+========================== */
+
+.complete-btn {
+  margin-top: 1rem;
+
+  padding: 0.65rem 1rem;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  color: white;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+
+  transition: 0.25s ease;
+}
+
+.complete-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* ==========================
+   Completed Orders
+========================== */
+
+.order-card.completed {
+  border-left-color: #22c55e;
+
+  background: #ecfdf5;
+}
+
+.order-card.completed .order-total {
+  color: #64748b !important;
+}
+
+.completed-text {
+  color: #16a34a !important;
+
+  font-weight: 700;
+}

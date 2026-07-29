@@ -1,6 +1,6 @@
 import "./ShiftRow.css";
 
-import { calculateShiftHours } from "../../../utils/shiftUtils.js";
+import { calculateShiftHours } from "../../utils/shiftUtils";
 
 const ShiftRow = ({ shift }) => {
   return (
