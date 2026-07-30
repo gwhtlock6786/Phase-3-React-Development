@@ -1,0 +1,74 @@
+/* ==========================
+   Hours Card
+========================== */
+
+.hours-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+
+  margin: 2rem auto;
+
+  padding: 2rem;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+
+  color: white;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.25s ease;
+}
+
+/* ==========================
+   Hover Effect
+========================== */
+
+.hours-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.hours-card h2 {
+  margin-bottom: 1rem;
+
+  font-size: 1.25rem;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+/* ==========================
+   Hours Display
+========================== */
+
+.hours-card p {
+  margin: 0;
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 600px) {
+  .hours-card {
+    width: 80%;
+  }
+}

@@ -1,0 +1,95 @@
+/* ==========================
+   Stats Container
+========================== */
+
+.stats-container {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+
+  margin-top: 2rem;
+}
+
+/* ==========================
+   Stat Cards
+========================== */
+
+.stat-card {
+  width: 220px;
+
+  padding: 1.5rem;
+
+  border-radius: 18px;
+
+  color: white;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================
+   Values
+========================== */
+
+.stat-value {
+  margin: 0;
+
+  font-size: 2.5rem;
+
+  font-weight: 800;
+}
+
+/* ==========================
+   Labels
+========================== */
+
+.stat-label {
+  margin-top: 0.5rem;
+
+  font-size: 1rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+/* ==========================
+   Card Colors
+========================== */
+
+.pending {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.completed {
+  background: linear-gradient(135deg, #10b981, #047857);
+}
+
+.revenue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 700px) {
+  .stat-card {
+    width: 90%;
+  }
+}
