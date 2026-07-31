@@ -4,6 +4,7 @@ const shifts = [
   // ========================================
 
   {
+    id: 1,
     employee: "Maria",
     date: "2026-07-27",
     startTime: "08:00",
@@ -12,6 +13,7 @@ const shifts = [
   },
 
   {
+    id: 2,
     employee: "Maria",
     date: "2026-07-29",
     startTime: "08:00",
@@ -20,6 +22,7 @@ const shifts = [
   },
 
   {
+    id: 3,
     employee: "Maria",
     date: "2026-07-31",
     startTime: "10:00",
@@ -32,6 +35,7 @@ const shifts = [
   // ========================================
 
   {
+    id: 4,
     employee: "James",
     date: "2026-07-27",
     startTime: "11:00",
@@ -40,6 +44,7 @@ const shifts = [
   },
 
   {
+    id: 5,
     employee: "James",
     date: "2026-07-28",
     startTime: "12:00",
@@ -48,6 +53,7 @@ const shifts = [
   },
 
   {
+    id: 6,
     employee: "James",
     date: "2026-07-30",
     startTime: "15:00",
@@ -60,6 +66,7 @@ const shifts = [
   // ========================================
 
   {
+    id: 7,
     employee: "Alex",
     date: "2026-07-28",
     startTime: "09:00",
@@ -68,6 +75,7 @@ const shifts = [
   },
 
   {
+    id: 8,
     employee: "Alex",
     date: "2026-07-29",
     startTime: "16:00",
@@ -76,6 +84,7 @@ const shifts = [
   },
 
   {
+    id: 9,
     employee: "Alex",
     date: "2026-07-31",
     startTime: "17:00",
@@ -88,6 +97,7 @@ const shifts = [
   // ========================================
 
   {
+    id: 10,
     employee: "Sam",
     date: "2026-07-27",
     startTime: "10:00",
@@ -96,6 +106,7 @@ const shifts = [
   },
 
   {
+    id: 11,
     employee: "Sam",
     date: "2026-07-30",
     startTime: "16:00",
@@ -104,6 +115,7 @@ const shifts = [
   },
 
   {
+    id: 12,
     employee: "Sam",
     date: "2026-08-01",
     startTime: "11:00",

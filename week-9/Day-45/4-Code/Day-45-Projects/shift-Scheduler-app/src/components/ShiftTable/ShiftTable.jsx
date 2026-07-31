@@ -2,7 +2,7 @@ import "./ShiftTable.css";
 
 import ShiftRow from "../ShiftRow/ShiftRow";
 
-const ShiftTable = ({ shifts }) => {
+const ShiftTable = ({ shifts, setShifts }) => {
   return (
     <section className="table-section">
       <table>
@@ -14,12 +14,13 @@ const ShiftTable = ({ shifts }) => {
             <th>End Time</th>
             <th>Role</th>
             <th>Hours</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
         <tbody>
-          {shifts.map((shift, index) => (
-            <ShiftRow key={index} shift={shift} />
+          {shifts.map((shift) => (
+            <ShiftRow key={shift.id} shift={shift} setShifts={setShifts} />
           ))}
         </tbody>
       </table>

@@ -4,25 +4,30 @@
 
 .hours-card {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
-  width: 300px;
+  width: 320px;
 
   margin: 2rem auto;
 
   padding: 2rem;
 
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: rgba(255, 255, 255, 0.95);
 
-  color: white;
+  color: #065f46;
 
   border-radius: 16px;
 
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 
-  transition: transform 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 /* ==========================
@@ -30,9 +35,9 @@
 ========================== */
 
 .hours-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
 }
 
 /* ==========================
@@ -42,11 +47,13 @@
 .hours-card h2 {
   margin-bottom: 1rem;
 
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 
   letter-spacing: 1px;
 
   text-align: center;
+
+  color: #064e3b;
 }
 
 /* ==========================
@@ -56,11 +63,13 @@
 .hours-card p {
   margin: 0;
 
-  font-size: 3rem;
+  font-size: 3.5rem;
 
-  font-weight: 800;
+  font-weight: 900;
 
   letter-spacing: 2px;
+
+  color: #047857;
 }
 
 /* ==========================
@@ -69,6 +78,10 @@
 
 @media (max-width: 600px) {
   .hours-card {
-    width: 80%;
+    width: 85%;
+  }
+
+  .hours-card p {
+    font-size: 2.8rem;
   }
 }

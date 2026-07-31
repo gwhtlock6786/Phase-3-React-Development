@@ -3,7 +3,9 @@
 ========================== */
 
 .shift-row {
-  transition: all 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 /* ==========================
@@ -11,7 +13,7 @@
 ========================== */
 
 .shift-row:hover {
-  background: #f1f5f9;
+  background: #ecfdf5;
 }
 
 /* ==========================
@@ -19,19 +21,106 @@
 ========================== */
 
 .shift-row td {
-  padding: 0.9rem 1rem;
+  padding: 1rem;
 
-  color: #334155;
+  color: #1f2937;
 
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #d1fae5;
+
+  font-size: 0.95rem;
 }
 
 /* ==========================
    Hours Column
 ========================== */
 
-.shift-row td:last-child {
+.shift-row td:nth-child(6) {
+  font-weight: 800;
+
+  color: #047857;
+
+  text-align: center;
+}
+
+/* ==========================
+   Role Select
+========================== */
+
+.shift-row select {
+  width: 100%;
+
+  min-width: 120px;
+
+  padding: 0.45rem 0.75rem;
+
+  font: inherit;
+
+  font-weight: 600;
+
+  color: #065f46;
+
+  background: #ecfdf5;
+
+  border: 2px solid #a7f3d0;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Hover */
+
+.shift-row select:hover {
+  border-color: #34d399;
+
+  background: white;
+}
+
+/* Focus */
+
+.shift-row select:focus {
+  outline: none;
+
+  border-color: #047857;
+
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.2);
+}
+
+/* ==========================
+   Delete Button
+========================== */
+
+.delete-btn {
+  padding: 0.45rem 0.9rem;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #047857;
+
+  color: white;
+
   font-weight: 700;
 
-  color: #2563eb;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.delete-btn:hover {
+  background: #065f46;
+}
+
+.delete-btn:active {
+  transform: scale(0.96);
 }
