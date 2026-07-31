@@ -1,10 +1,52 @@
+import { useState } from "react";
 import "./OrderForm.css";
 
-const OrderForm = () => {
+const OrderForm = ({ setOrders }) => {
+  const [formData, setFormData] = useState({
+    customerName: "",
+    items: "",
+    total: "",
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setFormData((previousForm) => ({
+      ...previousForm,
+      [name]: value,
+    }));
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
-    alert("Order Added!");
+    const newOrder = {
+      id: Date.now(),
+
+      customerName: formData.customerName,
+
+      items: formData.items,
+
+      total: Number(formData.total),
+
+      status: "pending",
+
+      timestamp: new Date().toISOString(),
+    };
+
+    setOrders((previousOrders) => [...previousOrders, newOrder]);
+
+    setFormData({
+      customerName: "",
+
+      items: "",
+
+      total: "",
+    });
+  }
+
+  function handleReset() {
+    setOrders([]);
   }
 
   return (
@@ -13,34 +55,46 @@ const OrderForm = () => {
 
       <form className="order-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="customer-name">Customer Name</label>
+          <label htmlFor="customerName">Customer Name</label>
 
           <input
             type="text"
-            id="customer-name"
+            id="customerName"
+            name="customerName"
+            value={formData.customerName}
+            onChange={handleChange}
             placeholder="Enter customer name"
+            required
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="order-items">Order Items</label>
+          <label htmlFor="items">Order Items</label>
 
           <input
             type="text"
-            id="order-items"
+            id="items"
+            name="items"
+            value={formData.items}
+            onChange={handleChange}
             placeholder="Burger, Fries, Soda"
+            required
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="order-total">Order Total ($)</label>
+          <label htmlFor="total">Order Total ($)</label>
 
           <input
             type="number"
-            id="order-total"
+            id="total"
+            name="total"
+            value={formData.total}
+            onChange={handleChange}
             placeholder="18.75"
             min="0"
             step="0.01"
+            required
           />
         </div>
 
@@ -51,7 +105,9 @@ const OrderForm = () => {
 
       <hr />
 
-      <button className="reset-btn">Reset Orders</button>
+      <button className="reset-btn" onClick={handleReset}>
+        Reset Orders
+      </button>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import OrderCard from "../OrderCard/OrderCard";
 import "./OrdersPanel.css";
 
-const OrdersPanel = ({ orders }) => {
+const OrdersPanel = ({ orders, setOrders }) => {
   const pendingOrders = orders.filter((order) => order.status === "pending");
 
   const completedOrders = orders.filter(
@@ -17,7 +17,7 @@ const OrdersPanel = ({ orders }) => {
           <p className="empty-message">No pending orders</p>
         ) : (
           pendingOrders.map((order) => (
-            <OrderCard key={order.id} order={order} />
+            <OrderCard key={order.id} order={order} setOrders={setOrders} />
           ))
         )}
       </div>
@@ -29,7 +29,7 @@ const OrdersPanel = ({ orders }) => {
           <p className="empty-message">No completed orders</p>
         ) : (
           completedOrders.map((order) => (
-            <OrderCard key={order.id} order={order} />
+            <OrderCard key={order.id} order={order} setOrders={setOrders} />
           ))
         )}
       </div>

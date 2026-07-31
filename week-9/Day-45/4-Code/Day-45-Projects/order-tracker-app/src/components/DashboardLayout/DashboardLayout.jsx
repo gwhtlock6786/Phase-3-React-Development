@@ -3,12 +3,12 @@ import OrdersPanel from "../OrdersPanel/OrdersPanel";
 
 import "./DashboardLayout.css";
 
-const DashboardLayout = ({ orders }) => {
+const DashboardLayout = ({ orders, setOrders }) => {
   return (
     <main className="dashboard-layout">
-      <OrderForm />
+      <OrderForm setOrders={setOrders} />
 
-      <OrdersPanel orders={orders} />
+      <OrdersPanel orders={orders} setOrders={setOrders} />
     </main>
   );
 };
