@@ -1,0 +1,185 @@
+/* ==========================
+   Add Shift Form
+========================== */
+
+.add-shift-form {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  margin: 2rem auto;
+
+  padding: 2rem;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ==========================
+   Hover Effect
+========================== */
+
+.add-shift-form:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.add-shift-form h2 {
+  margin-bottom: 1.5rem;
+
+  color: #064e3b;
+
+  font-size: 1.5rem;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+/* ==========================
+   Form Layout
+========================== */
+
+.add-shift-form form {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  gap: 1rem;
+}
+
+/* ==========================
+   Labels
+========================== */
+
+.add-shift-form label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.4rem;
+
+  color: #065f46;
+
+  font-weight: 700;
+}
+
+/* ==========================
+   Inputs + Select
+========================== */
+
+.add-shift-form input,
+.add-shift-form select {
+  padding: 0.75rem 1rem;
+
+  font-size: 1rem;
+
+  font-family: inherit;
+
+  color: #1f2937;
+
+  background: #ecfdf5;
+
+  border: 2px solid #a7f3d0;
+
+  border-radius: 10px;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover */
+
+.add-shift-form input:hover,
+.add-shift-form select:hover {
+  background: white;
+
+  border-color: #34d399;
+}
+
+/* Focus */
+
+.add-shift-form input:focus,
+.add-shift-form select:focus {
+  outline: none;
+
+  background: white;
+
+  border-color: #047857;
+
+  box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.2);
+}
+
+/* ==========================
+   Submit Button
+========================== */
+
+.add-shift-form button {
+  margin-top: 1rem;
+
+  padding: 0.8rem 1rem;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #047857;
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* Hover */
+
+.add-shift-form button:hover {
+  background: #065f46;
+}
+
+/* Click */
+
+.add-shift-form button:active {
+  transform: scale(0.97);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 600px) {
+  .add-shift-form {
+    width: 90%;
+
+    padding: 1.5rem;
+  }
+}

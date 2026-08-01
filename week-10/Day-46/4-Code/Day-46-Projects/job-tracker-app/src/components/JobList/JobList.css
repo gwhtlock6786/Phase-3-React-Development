@@ -1,0 +1,26 @@
+.jobs-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  align-items: stretch;
+}
+
+#job-list-heading {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 4rem;
+  letter-spacing: 8px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.job-list-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

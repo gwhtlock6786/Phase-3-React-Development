@@ -1,0 +1,92 @@
+/* ==========================
+   Shift Dashboard Layout
+========================== */
+
+#shift-info {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 2rem;
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 3rem auto;
+
+  padding: 0 2rem;
+}
+
+/* ==========================
+   Add Shift Navigation Button
+========================== */
+
+.add-shift-link {
+  display: block;
+
+  width: fit-content;
+
+  margin: 2rem auto;
+
+  padding: 0.8rem 1.8rem;
+
+  background: #34d399;
+
+  color: #d0e0dc;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ==========================
+   Hover Effect
+========================== */
+
+.add-shift-link:hover {
+  background: #6ee7b7;
+
+  color: #064e3b;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================
+   Click Effect
+========================== */
+
+.add-shift-link:active {
+  transform: scale(0.96);
+}
+
+/* ==========================
+   Responsive Layout
+========================== */
+
+@media (max-width: 1000px) {
+  #shift-info {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}

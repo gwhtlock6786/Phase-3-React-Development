@@ -1,0 +1,15 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+  --button-gradient: linear-gradient(135deg, #f59e0b, #ea580c);
+}
+
+/* ==========================
+   Page Background
+========================== */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+}
