@@ -1,0 +1,111 @@
+/* ==========================
+   Customer Filter
+========================== */
+
+.customer-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 420px;
+  width: 100%;
+
+  margin: 2rem auto;
+
+  padding: 1.5rem 2rem;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.customer-filter h2 {
+  margin: 0 0 1rem;
+
+  color: #1e293b;
+
+  font-size: 1.5rem;
+
+  text-align: center;
+}
+
+/* ==========================
+   Label
+========================== */
+
+.customer-filter label {
+  align-self: flex-start;
+
+  margin-bottom: 0.5rem;
+
+  color: #475569;
+
+  font-weight: 700;
+}
+
+/* ==========================
+   Dropdown
+========================== */
+
+.customer-filter select {
+  width: 100%;
+
+  padding: 0.8rem 1rem;
+
+  font: inherit;
+
+  color: #334155;
+
+  background: #f8fafc;
+
+  border: 2px solid #dbe3ef;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.customer-filter select:hover {
+  border-color: #60a5fa;
+}
+
+.customer-filter select:focus {
+  outline: none;
+
+  background: white;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+
+/* ==========================
+   Second Dropdown Spacing
+========================== */
+
+.customer-filter label:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 600px) {
+  .customer-filter {
+    width: 90%;
+
+    padding: 1.25rem;
+  }
+}
