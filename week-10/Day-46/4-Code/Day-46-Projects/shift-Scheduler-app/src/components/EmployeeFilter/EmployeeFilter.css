@@ -108,7 +108,9 @@
 
   box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.2);
 }
-
+.employee-filter label:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
 /* ==========================
    Responsive
 ========================== */

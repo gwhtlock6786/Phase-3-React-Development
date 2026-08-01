@@ -47,13 +47,17 @@
 .table-section th {
   padding: 1.1rem 1rem;
 
-  text-align: left;
+  text-align: center;
 
   font-size: 1rem;
 
   letter-spacing: 1px;
 
   text-transform: uppercase;
+}
+
+.table-section td {
+  text-align: center;
 }
 
 /* ==========================

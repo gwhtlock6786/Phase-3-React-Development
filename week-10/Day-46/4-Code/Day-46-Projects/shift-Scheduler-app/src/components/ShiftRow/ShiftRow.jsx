@@ -1,62 +1,157 @@
 import "./ShiftRow.css";
 
+import { useState } from "react";
 import { calculateShiftHours } from "../../utils/shiftUtils";
 
-const ShiftRow = ({ shift, setShifts }) => {
-  function handleRoleChange(event) {
-    const newRole = event.target.value;
+const ShiftRow = ({ shift, onUpdateShift, onDeleteShift }) => {
+  const [isEditing, setIsEditing] = useState(false);
 
-    setShifts((previousShifts) =>
-      previousShifts.map((currentShift) =>
-        currentShift.id === shift.id
-          ? {
-              ...currentShift,
-              role: newRole,
-            }
-          : currentShift,
-      ),
-    );
+  const [editedShift, setEditedShift] = useState({
+    employee: shift.employee,
+    date: shift.date,
+    startTime: shift.startTime,
+    endTime: shift.endTime,
+    role: shift.role,
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setEditedShift((previousShift) => ({
+      ...previousShift,
+      [name]: value,
+    }));
   }
 
-  function handleDeleteShift() {
-    const confirmed = window.confirm(`Delete ${shift.employee}'s shift?`);
+  function handleSave() {
+    const updatedShift = {
+      ...shift,
+      ...editedShift,
+    };
+
+    onUpdateShift(updatedShift);
+
+    setEditedShift({
+      employee: updatedShift.employee,
+      date: updatedShift.date,
+      startTime: updatedShift.startTime,
+      endTime: updatedShift.endTime,
+      role: updatedShift.role,
+    });
+
+    setIsEditing(false);
+  }
+  function handleDelete() {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this shift?",
+    );
 
     if (!confirmed) return;
 
-    setShifts((previousShifts) =>
-      previousShifts.filter((currentShift) => currentShift.id !== shift.id),
-    );
+    onDeleteShift(shift.id);
+  }
+
+  function handleCancel() {
+    setEditedShift({
+      employee: shift.employee,
+      date: shift.date,
+      startTime: shift.startTime,
+      endTime: shift.endTime,
+      role: shift.role,
+    });
+
+    setIsEditing(false);
   }
 
   return (
     <tr className="shift-row">
-      <td>{shift.employee}</td>
+      {isEditing ? (
+        <>
+          <td>
+            <input
+              name="employee"
+              value={editedShift.employee}
+              onChange={handleChange}
+            />
+          </td>
 
-      <td>{shift.date}</td>
+          <td>
+            <input
+              type="date"
+              name="date"
+              value={editedShift.date}
+              onChange={handleChange}
+            />
+          </td>
 
-      <td>{shift.startTime}</td>
+          <td>
+            <input
+              type="time"
+              name="startTime"
+              value={editedShift.startTime}
+              onChange={handleChange}
+            />
+          </td>
 
-      <td>{shift.endTime}</td>
+          <td>
+            <input
+              type="time"
+              name="endTime"
+              value={editedShift.endTime}
+              onChange={handleChange}
+            />
+          </td>
 
-      <td>
-        <select value={shift.role} onChange={handleRoleChange}>
-          <option value="Manager">Manager</option>
+          <td>
+            <input
+              name="role"
+              value={editedShift.role}
+              onChange={handleChange}
+            />
+          </td>
 
-          <option value="Cook">Cook</option>
+          <td>
+            {calculateShiftHours({
+              ...shift,
+              ...editedShift,
+            })}
+          </td>
 
-          <option value="Server">Server</option>
+          <td>
+            <button className="save-btn" onClick={handleSave}>
+              Save
+            </button>
 
-          <option value="Host">Host</option>
-        </select>
-      </td>
+            <button className="cancel-btn" onClick={handleCancel}>
+              Cancel
+            </button>
+          </td>
+        </>
+      ) : (
+        <>
+          <td>{shift.employee}</td>
 
-      <td>{calculateShiftHours(shift)}</td>
+          <td>{shift.date}</td>
 
-      <td>
-        <button className="delete-btn" onClick={handleDeleteShift}>
-          Delete
-        </button>
-      </td>
+          <td>{shift.startTime}</td>
+
+          <td>{shift.endTime}</td>
+
+          <td>{shift.role}</td>
+
+          <td>{calculateShiftHours(shift)}</td>
+
+          <td>
+            <button className="edit-btn" onClick={() => setIsEditing(true)}>
+              Edit
+            </button>
+
+            <button className="delete-btn" onClick={handleDelete}>
+              Delete
+            </button>
+          </td>
+        </>
+      )}
     </tr>
   );
 };

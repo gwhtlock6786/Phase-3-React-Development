@@ -3,9 +3,7 @@
 ========================== */
 
 .shift-row {
-  transition:
-    background-color 0.2s ease,
-    transform 0.15s ease;
+  transition: background-color 0.2s ease;
 }
 
 /* ==========================
@@ -13,7 +11,7 @@
 ========================== */
 
 .shift-row:hover {
-  background: #ecfdf5;
+  background: #f8fafc;
 }
 
 /* ==========================
@@ -21,13 +19,13 @@
 ========================== */
 
 .shift-row td {
-  padding: 1rem;
+  padding: 0.9rem 1rem;
 
-  color: #1f2937;
+  color: #334155;
 
-  border-bottom: 1px solid #d1fae5;
+  border-bottom: 1px solid #e2e8f0;
 
-  font-size: 0.95rem;
+  vertical-align: middle;
 }
 
 /* ==========================
@@ -35,62 +33,108 @@
 ========================== */
 
 .shift-row td:nth-child(6) {
-  font-weight: 800;
+  font-weight: 700;
 
-  color: #047857;
-
-  text-align: center;
+  color: #2563eb;
 }
 
 /* ==========================
-   Role Select
+   Inputs
 ========================== */
 
-.shift-row select {
+.shift-row input {
   width: 100%;
 
-  min-width: 120px;
+  min-width: 90px;
 
-  padding: 0.45rem 0.75rem;
+  padding: 0.45rem 0.6rem;
 
-  font: inherit;
+  font-family: inherit;
 
-  font-weight: 600;
+  font-size: 0.95rem;
 
-  color: #065f46;
+  color: #334155;
 
-  background: #ecfdf5;
+  background: white;
 
-  border: 2px solid #a7f3d0;
+  border: 2px solid #dbe3ef;
 
-  border-radius: 8px;
+  border-radius: 6px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.shift-row input:hover {
+  border-color: #93c5fd;
+}
+
+.shift-row input:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* ==========================
+   Action Column
+========================== */
+
+.shift-row td:last-child {
+  display: flex;
+
+  gap: 0.5rem;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.shift-row button {
+  padding: 0.45rem 0.85rem;
+
+  font-family: inherit;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  border: none;
+
+  border-radius: 6px;
 
   cursor: pointer;
 
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+    transform 0.15s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* Hover */
-
-.shift-row select:hover {
-  border-color: #34d399;
-
-  background: white;
+.shift-row button:hover {
+  transform: translateY(-2px);
 }
 
-/* Focus */
+/* ==========================
+   Edit Button
+========================== */
 
-.shift-row select:focus {
-  outline: none;
+.edit-btn {
+  color: white;
 
-  border-color: #047857;
+  background: #2563eb;
+}
 
-  background: white;
+.edit-btn:hover {
+  background: #1d4ed8;
 
-  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.2);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.3);
 }
 
 /* ==========================
@@ -98,29 +142,59 @@
 ========================== */
 
 .delete-btn {
-  padding: 0.45rem 0.9rem;
-
-  border: none;
-
-  border-radius: 8px;
-
-  background: #047857;
-
   color: white;
 
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    transform 0.15s ease;
+  background: #dc2626;
 }
 
 .delete-btn:hover {
-  background: #065f46;
+  background: #b91c1c;
+
+  box-shadow: 0 5px 12px rgba(220, 38, 38, 0.3);
 }
 
-.delete-btn:active {
-  transform: scale(0.96);
+/* ==========================
+   Save Button
+========================== */
+
+.save-btn {
+  color: white;
+
+  background: #16a34a;
+}
+
+.save-btn:hover {
+  background: #15803d;
+
+  box-shadow: 0 5px 12px rgba(22, 163, 74, 0.3);
+}
+
+/* ==========================
+   Cancel Button
+========================== */
+
+.cancel-btn {
+  color: white;
+
+  background: #64748b;
+}
+
+.cancel-btn:hover {
+  background: #475569;
+
+  box-shadow: 0 5px 12px rgba(100, 116, 139, 0.3);
+}
+
+/* ==========================
+   Responsive Table
+========================== */
+
+@media (max-width: 800px) {
+  .shift-row td:last-child {
+    flex-direction: column;
+  }
+
+  .shift-row button {
+    width: 100%;
+  }
 }
