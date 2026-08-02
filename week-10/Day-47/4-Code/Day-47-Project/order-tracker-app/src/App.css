@@ -1,0 +1,50 @@
+.app-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ==========================
+   Reset Demo Button
+========================== */
+
+.reset-demo-btn {
+  display: block;
+
+  margin: auto;
+
+  padding: 0.8rem 1.75rem;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  font-family: inherit;
+
+  color: white;
+
+  background: #dc2626;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.15s ease,
+    box-shadow 0.25s ease;
+
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.25);
+}
+
+.reset-demo-btn:hover {
+  background: #b91c1c;
+
+  box-shadow: 0 10px 22px rgba(220, 38, 38, 0.35);
+}
+
+.reset-demo-btn:active {
+  transform: scale(0.97);
+}

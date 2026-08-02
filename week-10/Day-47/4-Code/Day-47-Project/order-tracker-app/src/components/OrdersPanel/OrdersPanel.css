@@ -1,0 +1,76 @@
+/* ==========================
+   Orders Container
+========================== */
+
+.orders-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ==========================
+   Order Sections
+========================== */
+
+.order-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+  background: white;
+
+  padding: 1.5rem;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.order-section h3 {
+  margin-top: 0;
+
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2c3e50;
+
+  font-size: 3rem;
+  grid-column: 1/ -1;
+}
+
+/* ==========================
+   Cards Spacing
+========================== */
+
+.order-section .order-card {
+  margin-bottom: 1rem;
+}
+
+.order-section .order-card:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================
+   Empty State
+========================== */
+
+.empty-message {
+  text-align: center;
+
+  color: #64748b;
+
+  font-style: italic;
+
+  padding: 1rem;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 900px) {
+  .orders-panel {
+    gap: 1rem;
+  }
+}
