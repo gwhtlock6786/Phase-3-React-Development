@@ -10,6 +10,8 @@ const JobCard = ({
   statusDate,
   setJobs,
 }) => {
+  
+  
   function handleDeleteJob() {
     // const confirmed = window.confirm(
     //   "Are you sure you want to delete this job application?",
