@@ -48,3 +48,15 @@
 .reset-demo-btn:active {
   transform: scale(0.97);
 }
+
+.dashboard-layout {
+  display: grid;
+
+  grid-template-columns: 350px 1fr;
+
+  gap: 2rem;
+
+  align-items: start;
+
+  width: 100%;
+}

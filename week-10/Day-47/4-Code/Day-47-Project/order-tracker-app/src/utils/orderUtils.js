@@ -38,9 +38,7 @@ export function validateOrder(customerName, items, total) {
 }
 
 export function calculateRevenue(orders) {
-  return orders
-    .filter((order) => order.status === ORDER_STATUS.COMPLETED)
-    .reduce((sum, order) => sum + order.total, 0);
+  return orders.reduce((sum, order) => sum + order.total, 0);
 }
 
 export function countOrders(orders, status) {
@@ -56,4 +54,36 @@ export function formatCurrency(amount) {
 
 export function formatTime(timestamp) {
   return new Date(timestamp).toLocaleTimeString();
+}
+
+export function filterOrdersByCustomer(orders, customerName) {
+  return customerName === "All"
+    ? orders
+    : orders.filter((order) => order.customerName === customerName);
+}
+
+export function sortOrders(orders, sortBy) {
+  return [...orders].sort((a, b) => {
+    switch (sortBy) {
+      case "oldest":
+        return new Date(a.timestamp) - new Date(b.timestamp);
+
+      case "customer":
+        return a.customerName.localeCompare(b.customerName);
+
+      case "highest":
+        return b.total - a.total;
+
+      case "lowest":
+        return a.total - b.total;
+
+      case "newest":
+      default:
+        return new Date(b.timestamp) - new Date(a.timestamp);
+    }
+  });
+}
+
+export function filterOrdersByStatus(status, orders) {
+  return orders.filter((order) => order.status === status);
 }

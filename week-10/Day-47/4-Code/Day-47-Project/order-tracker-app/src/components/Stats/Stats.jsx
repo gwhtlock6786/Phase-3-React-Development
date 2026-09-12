@@ -1,6 +1,13 @@
 import "./Stats.css";
-
-const Stats = ({ pending = 0, completed = 0, revenue = 0 }) => {
+import {
+  countOrders,
+  ORDER_STATUS,
+  calculateRevenue,
+} from "../../utils/orderUtils";
+const Stats = ({ orders }) => {
+  const pending = orders ? countOrders(orders, ORDER_STATUS.PENDING) : 0;
+  const completed = orders ? countOrders(orders, ORDER_STATUS.COMPLETED) : 0;
+  const revenue = orders ? calculateRevenue(orders) : 0;
   return (
     <section className="stats-container">
       <div className="stat-card pending">
