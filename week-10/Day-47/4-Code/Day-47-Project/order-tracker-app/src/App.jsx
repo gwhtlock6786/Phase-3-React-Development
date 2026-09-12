@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
+import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
+import AppRoutes from "./routes/AppRoutes";
 import Stats from "./components/Stats/Stats";
 import DashboardLayout from "./components/DashboardLayout/DashboardLayout";
 import CustomerFilter from "./components/CustomerFilter/CustomerFilter";
@@ -74,27 +76,31 @@ function App() {
 
   return (
     <section className="app-section">
-      <Header />
+      <BrowserRouter>
+        <Header />
 
-      <button className="reset-demo-btn" onClick={handleResetOrders}>
-        Reset Demo Data
-      </button>
+        <button className="reset-demo-btn" onClick={handleResetOrders}>
+          Reset Demo Data
+        </button>
 
-      <CustomerFilter
-        orders={orders}
-        selectedCustomer={selectedCustomer}
-        setSelectedCustomer={setSelectedCustomer}
-        sortBy={sortBy}
-        setSortBy={setSortBy}
-      />
+        <AppRoutes orders={orders} setOrders={setOrders} />
 
-      <Stats
-        pending={pendingOrders.length}
-        completed={completedOrders.length}
-        revenue={totalRevenue}
-      />
+        <CustomerFilter
+          orders={orders}
+          selectedCustomer={selectedCustomer}
+          setSelectedCustomer={setSelectedCustomer}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+        />
 
-      <DashboardLayout orders={sortedOrders} setOrders={setOrders} />
+        <Stats
+          pending={pendingOrders.length}
+          completed={completedOrders.length}
+          revenue={totalRevenue}
+        />
+
+        <DashboardLayout orders={sortedOrders} setOrders={setOrders} />
+      </BrowserRouter>
     </section>
   );
 }

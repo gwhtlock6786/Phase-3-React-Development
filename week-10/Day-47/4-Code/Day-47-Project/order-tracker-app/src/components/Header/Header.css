@@ -41,3 +41,30 @@
 
   font-size: 1.1rem;
 }
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.main-nav a {
+  padding: 0.5rem 1rem;
+
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.main-nav a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+  border-radius: 25px;
+}
