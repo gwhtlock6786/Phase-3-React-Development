@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { createOrder, validateOrder } from "../../utils/orderUtils";
 import "./OrderForm.css";
+import { useNavigate } from "react-router-dom";
 
 const OrderForm = ({ setOrders }) => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     customerName: "",
     items: "",
@@ -33,13 +36,7 @@ const OrderForm = ({ setOrders }) => {
 
     setOrders((previousOrders) => [...previousOrders, newOrder]);
 
-    setFormData({
-      customerName: "",
-
-      items: "",
-
-      total: "",
-    });
+    navigate("/orders");
   }
 
   function handleReset() {
