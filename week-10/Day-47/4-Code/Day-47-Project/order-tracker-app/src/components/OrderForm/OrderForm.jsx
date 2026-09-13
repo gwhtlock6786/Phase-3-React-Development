@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createOrder, validateOrder } from "../../utils/orderUtils";
 import "./OrderForm.css";
 
 const OrderForm = ({ setOrders }) => {
@@ -20,19 +21,15 @@ const OrderForm = ({ setOrders }) => {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const newOrder = {
-      id: Date.now(),
+    if (!validateOrder(formData)) {
+      return;
+    }
 
-      customerName: formData.customerName,
-
-      items: formData.items,
-
-      total: Number(formData.total),
-
-      status: "pending",
-
-      timestamp: new Date().toISOString(),
-    };
+    const newOrder = createOrder(
+      formData.customerName,
+      formData.items,
+      Number(formData.total),
+    );
 
     setOrders((previousOrders) => [...previousOrders, newOrder]);
 

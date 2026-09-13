@@ -1,7 +1,12 @@
 import "./OrderCard.css";
 
+import {
+  formatCurrency,
+  formatTime,
+  ORDER_STATUS,
+} from "../../utils/orderUtils";
 const OrderCard = ({ order, setOrders }) => {
-  const isCompleted = order.status === "completed";
+  const isCompleted = order.status === ORDER_STATUS.COMPLETED;
 
   function handleCompleteOrder() {
     setOrders((previousOrders) =>
@@ -9,7 +14,7 @@ const OrderCard = ({ order, setOrders }) => {
         currentOrder.id === order.id
           ? {
               ...currentOrder,
-              status: "completed",
+              status: ORDER_STATUS.COMPLETED,
               completedAt: new Date().toISOString(),
             }
           : currentOrder,
@@ -35,9 +40,9 @@ const OrderCard = ({ order, setOrders }) => {
         <strong>Items:</strong> {order.items}
       </p>
 
-      <p className="order-total">${order.total.toFixed(2)}</p>
+      <p className="order-total">{formatCurrency(order.total)}</p>
 
-      <p>Created: {new Date(order.timestamp).toLocaleTimeString()}</p>
+      <p>Created: {formatTime(order.timestamp)}</p>
 
       <div className="button-options">
         {isCompleted ? (

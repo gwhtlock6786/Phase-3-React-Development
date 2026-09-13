@@ -3,11 +3,16 @@ import {
   countOrders,
   ORDER_STATUS,
   calculateRevenue,
+  formatCurrency,
+  filterOrdersByStatus,
 } from "../../utils/orderUtils";
 const Stats = ({ orders }) => {
-  const pending = orders ? countOrders(orders, ORDER_STATUS.PENDING) : 0;
+  const pending = countOrders(orders, ORDER_STATUS.PENDING);
   const completed = orders ? countOrders(orders, ORDER_STATUS.COMPLETED) : 0;
-  const revenue = orders ? calculateRevenue(orders) : 0;
+  const revenue = orders
+    ? calculateRevenue(filterOrdersByStatus(ORDER_STATUS.COMPLETED, orders))
+    : 0;
+
   return (
     <section className="stats-container">
       <div className="stat-card pending">
@@ -23,7 +28,7 @@ const Stats = ({ orders }) => {
       </div>
 
       <div className="stat-card revenue">
-        <p className="stat-value">${revenue.toFixed(2)}</p>
+        <p className="stat-value">{formatCurrency(revenue)}</p>
 
         <p className="stat-label">Revenue</p>
       </div>

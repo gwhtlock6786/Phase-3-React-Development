@@ -29,8 +29,12 @@ export function createOrder(customerName, items, total) {
   };
 }
 
-export function validateOrder(customerName, items, total) {
-  if (customerName === "" || items === "" || isNaN(total)) {
+export function validateOrder(formData) {
+  if (
+    formData.customerName === "" ||
+    formData.items === "" ||
+    isNaN(formData.total)
+  ) {
     return false;
   }
 
