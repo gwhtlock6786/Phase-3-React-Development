@@ -8,7 +8,10 @@ import ShiftTable from "./components/ShiftTable/ShiftTable";
 import AddShiftForm from "./components/AddShift/AddShift";
 import shiftsData from "./data/shift-data";
 
+import { BrowserRouter } from "react-router-dom";
+
 import { calculateShiftHours } from "./utils/shiftUtils";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   const [shifts, setShifts] = useState(() => {
@@ -110,35 +113,38 @@ function App() {
 
   return (
     <>
-      <Header />
+      <BrowserRouter>
+        <Header />
+        <AppRoutes />
 
-      <button className="reset-shifts-btn" onClick={handleResetShifts}>
-        Reset Demo Shifts
-      </button>
+        <button className="reset-shifts-btn" onClick={handleResetShifts}>
+          Reset Demo Shifts
+        </button>
 
-      <EmployeeFilter
-        shifts={shifts}
-        selectedEmployee={selectedEmployee}
-        setSelectedEmployee={setSelectedEmployee}
-        sortBy={sortBy}
-        setSortBy={setSortBy}
-        dateFilter={dateFilter}
-        setDateFilter={setDateFilter}
-      />
-
-      <section id="shift-info">
-        <HoursCard shifts={sortedShifts} />
-
-        <ShiftTable
-          shifts={sortedShifts}
-          onUpdateShift={handleUpdateShift}
-          onDeleteShift={handleDeleteShift}
+        <EmployeeFilter
+          shifts={shifts}
+          selectedEmployee={selectedEmployee}
+          setSelectedEmployee={setSelectedEmployee}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          dateFilter={dateFilter}
+          setDateFilter={setDateFilter}
         />
-      </section>
 
-      <hr />
+        <section id="shift-info">
+          <HoursCard shifts={sortedShifts} />
 
-      <AddShiftForm setShifts={setShifts} />
+          <ShiftTable
+            shifts={sortedShifts}
+            onUpdateShift={handleUpdateShift}
+            onDeleteShift={handleDeleteShift}
+          />
+        </section>
+
+        <hr />
+
+        <AddShiftForm setShifts={setShifts} />
+      </BrowserRouter>
     </>
   );
 }
