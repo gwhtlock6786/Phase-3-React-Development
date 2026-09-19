@@ -22,12 +22,14 @@ export const addItem = (cart, menuItem) => {
   }
 };
 
-export const calculateTotal = (cart) => {
-  const subtotal = cart.reduce((total, cartItem) => {
-    return total + cartItem.quantity * cartItem.price;
-  }, 0);
-
+export const calculateTotal = (subTotal) => {
   const tax = subtotal * 0.08;
 
   return tax + subtotal;
+};
+
+export const calculateSubtotal = (cart) => {
+  return cart.reduce((total, cartItem) => {
+    return total + cartItem.quantity * cartItem.price;
+  }, 0);
 };
