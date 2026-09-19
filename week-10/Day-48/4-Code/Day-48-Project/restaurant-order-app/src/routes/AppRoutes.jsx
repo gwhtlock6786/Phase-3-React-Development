@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import ShoppingCartPage from "../pages/ShoppingCartPage.jsx";
 import MenuPage from "../pages/MenuPage.jsx";
-const AppRoutes = () => {
+const AppRoutes = ({ addItem }) => {
   return (
     <Routes>
       <Route path="/cart" element={<ShoppingCartPage />}></Route>
-      <Route path="/menu" element={<MenuPage />}></Route>
+      <Route path="/menu" element={<MenuPage addItem={addItem} />}></Route>
     </Routes>
   );
 };

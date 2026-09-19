@@ -5,11 +5,14 @@ import Header from "./components/Heaader/Header";
 import AppRoutes from "./routes/AppRoutes";
 
 function App() {
+  function addItem(menuItem) {
+    console.log("Hello", menuItem);
+  }
   return (
     <>
       <BrowserRouter>
         <Header />
-        <AppRoutes />
+        <AppRoutes addItem={addItem} />
       </BrowserRouter>
     </>
   );
