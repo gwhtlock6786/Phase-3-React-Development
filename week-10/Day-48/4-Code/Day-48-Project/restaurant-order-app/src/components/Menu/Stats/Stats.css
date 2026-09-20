@@ -1,0 +1,76 @@
+/* =========================================
+   CART STATS
+   ========================================= */
+
+.cart-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+/* =========================================
+   INDIVIDUAL STAT
+   ========================================= */
+
+.cart-stat {
+  background-color: var(--white);
+
+  border: 1px solid var(--border-light);
+  border-left: 5px solid var(--lobster-red);
+  border-radius: var(--border-radius-md);
+
+  padding: 1.25rem 1.5rem;
+
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cart-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   STAT LABEL
+   ========================================= */
+
+.cart-stat-label {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* =========================================
+   STAT VALUE
+   ========================================= */
+
+.cart-stat strong {
+  color: var(--deep-navy);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   RESPONSIVE STATS
+   ========================================= */
+
+@media (max-width: 600px) {
+  .cart-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-stat {
+    padding: 1rem 1.25rem;
+  }
+}
