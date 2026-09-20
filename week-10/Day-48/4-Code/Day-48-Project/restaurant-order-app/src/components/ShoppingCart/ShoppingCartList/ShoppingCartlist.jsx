@@ -24,14 +24,14 @@ const ShoppingCartlist = ({ cart, total, subtotal }) => {
             <th>Tax</th>
             <th>Total</th>
           </tr>
-          <tbody>
-            <tr>
-              <td>${subtotal.toFixed(2)}</td>
-              <td>8%</td>
-              <td>${total.toFixed(2)}</td>
-            </tr>
-          </tbody>
         </thead>
+        <tbody>
+          <tr>
+            <td>${subtotal.toFixed(2)}</td>
+            <td>8%</td>
+            <td>${total.toFixed(2)}</td>
+          </tr>
+        </tbody>
       </table>
     </section>
   );

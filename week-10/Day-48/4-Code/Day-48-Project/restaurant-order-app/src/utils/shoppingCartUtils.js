@@ -33,3 +33,9 @@ export const calculateSubtotal = (cart) => {
     return total + Number(cartItem.quantity) * Number(cartItem.price);
   }, 0);
 };
+
+export const calculateTotalItemsInCart = (cart) => {
+  return cart.reduce((total, cartItem) => {
+    return total + Number(cartItem.quantity);
+  }, 0);
+};

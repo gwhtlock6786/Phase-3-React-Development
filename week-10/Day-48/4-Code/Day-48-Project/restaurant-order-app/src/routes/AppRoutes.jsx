@@ -5,7 +5,10 @@ const AppRoutes = ({ addItem, cart }) => {
   return (
     <Routes>
       <Route path="/cart" element={<ShoppingCartPage cart={cart} />}></Route>
-      <Route path="/menu" element={<MenuPage addItem={addItem} />}></Route>
+      <Route
+        path="/menu"
+        element={<MenuPage cart={cart} addItem={addItem} />}
+      ></Route>
     </Routes>
   );
 };
