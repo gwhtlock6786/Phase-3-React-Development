@@ -1,0 +1,66 @@
+/* =========================================
+   SHOPPING CART PAGE
+   ========================================= */
+
+.shopping-cart-page {
+  width: min(100% - 2rem, var(--content-width));
+  margin: 0 auto;
+
+  padding: 2.5rem 0 4rem;
+}
+
+/* =========================================
+   CART PAGE HEADER
+   ========================================= */
+
+.shopping-cart-header {
+  max-width: 750px;
+  margin: 0 auto 2.5rem;
+
+  text-align: center;
+}
+
+.cart-eyebrow {
+  margin-bottom: 0.5rem;
+
+  color: var(--lobster-red);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.shopping-cart-header h2 {
+  margin-bottom: 0.75rem;
+
+  color: var(--deep-navy);
+
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.shopping-cart-header p:last-child {
+  margin: 0;
+
+  color: var(--muted-text);
+
+  font-size: 1.05rem;
+}
+
+/* =========================================
+   RESPONSIVE CART PAGE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .shopping-cart-page {
+    padding-top: 2rem;
+  }
+
+  .shopping-cart-header {
+    margin-bottom: 2rem;
+  }
+
+  .shopping-cart-header p:last-child {
+    font-size: 1rem;
+  }
+}

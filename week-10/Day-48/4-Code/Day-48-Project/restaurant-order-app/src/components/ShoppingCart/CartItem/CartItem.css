@@ -1,0 +1,78 @@
+/* =========================================
+   CART ITEM ROW
+   ========================================= */
+
+.cart-item-row {
+  transition: background-color 0.2s ease;
+}
+
+.cart-item-row:hover {
+  background-color: #fff4cc;
+}
+
+/* =========================================
+   CART ITEM CELLS
+   ========================================= */
+
+.cart-item-row td {
+  padding: 1rem 1.25rem;
+
+  border-bottom: 1px solid var(--border-light);
+
+  color: var(--dark-text);
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   ITEM NAME
+   ========================================= */
+
+.cart-item-name {
+  color: var(--deep-navy);
+  font-weight: 700;
+}
+
+/* =========================================
+   PRICE
+   ========================================= */
+
+.cart-item-price {
+  color: var(--muted-text);
+  font-weight: 600;
+}
+
+/* =========================================
+   QUANTITY
+   ========================================= */
+
+.cart-item-quantity {
+  color: var(--deep-navy);
+  font-weight: 700;
+}
+
+/* =========================================
+   ITEM SUBTOTAL
+   ========================================= */
+
+.cart-item-subtotal {
+  color: var(--lobster-red);
+  font-weight: 800;
+}
+
+/* =========================================
+   LAST ROW
+   ========================================= */
+
+.cart-item-row:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   RESPONSIVE CART ITEM
+   ========================================= */
+
+@media (max-width: 700px) {
+  .cart-item-row td {
+    padding: 0.85rem 1rem;
+  }
+}
