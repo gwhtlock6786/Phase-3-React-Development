@@ -27,32 +27,53 @@ const ShoppingCartPage = ({
 
   const grandTotal = total + tipAmount;
 
+  const isCartEmpty = cart.length === 0;
+
   return (
     <main className="shopping-cart-page">
-      <section className="shopping-cart-header">
-        <p className="cart-eyebrow">Your Order</p>
+      {isCartEmpty ? (
+        <section className="empty-cart">
+          <h3>Your cart is empty!</h3>
+          <p>Add some delicious items from our menu to get started.</p>
 
-        <h2>Shopping Cart</h2>
+          <button
+            type="button"
+            onClick={() => (window.location.href = "/menu")}
+          >
+            Browse Menu
+          </button>
+        </section>
+      ) : (
+        <>
+          <section className="shopping-cart-header">
+            <p className="cart-eyebrow">Your Order</p>
 
-        <p>Review your selections before completing your order.</p>
-      </section>
+            <h2>Shopping Cart</h2>
 
-      <ShoppingCartlist
-        cart={cart}
-        removeItem={removeItem}
-        incrementQuantity={incrementQuantity}
-        decrementQuantity={decrementQuantity}
-      />
+            <p>Review your selections before completing your order.</p>
+          </section>
 
-      <TipCalculator selectedTip={selectedTip} onTipChange={setSelectedTip} />
+          <ShoppingCartlist
+            cart={cart}
+            removeItem={removeItem}
+            incrementQuantity={incrementQuantity}
+            decrementQuantity={decrementQuantity}
+          />
 
-      <OrderSummary
-        subtotal={subtotal}
-        tax={tax}
-        selectedTip={selectedTip}
-        tipAmount={tipAmount}
-        grandTotal={grandTotal}
-      />
+          <TipCalculator
+            selectedTip={selectedTip}
+            onTipChange={setSelectedTip}
+          />
+
+          <OrderSummary
+            subtotal={subtotal}
+            tax={tax}
+            selectedTip={selectedTip}
+            tipAmount={tipAmount}
+            grandTotal={grandTotal}
+          />
+        </>
+      )}
     </main>
   );
 };
