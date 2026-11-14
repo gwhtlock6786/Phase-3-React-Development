@@ -1,6 +1,9 @@
-import ShoppingCartlist from "../components/ShoppingCart/ShoppingCartList/ShoppingCartlist";
 import { useState } from "react";
+
+import ShoppingCartlist from "../components/ShoppingCart/ShoppingCartList/ShoppingCartlist";
 import TipCalculator from "../components/ShoppingCart/TipCalculator/TipCalculator";
+import OrderSummary from "../components/ShoppingCart/OrderSummary/OrderSummary";
+
 import "./ShoppingCartPage.css";
 
 const ShoppingCartPage = ({
@@ -14,9 +17,15 @@ const ShoppingCartPage = ({
 }) => {
   const [selectedTip, setSelectedTip] = useState(null);
 
+  // Cart calculations
   const subtotal = calculateSubtotal();
   const tax = calculateTax();
   const total = calculateTotal();
+
+  // Tip and final order calculations
+  const tipAmount = selectedTip ? subtotal * (selectedTip / 100) : 0;
+
+  const grandTotal = total + tipAmount;
 
   return (
     <main className="shopping-cart-page">
@@ -30,15 +39,20 @@ const ShoppingCartPage = ({
 
       <ShoppingCartlist
         cart={cart}
-        total={total}
-        subtotal={subtotal}
-        tax={tax}
         removeItem={removeItem}
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
       />
 
       <TipCalculator selectedTip={selectedTip} onTipChange={setSelectedTip} />
+
+      <OrderSummary
+        subtotal={subtotal}
+        tax={tax}
+        selectedTip={selectedTip}
+        tipAmount={tipAmount}
+        grandTotal={grandTotal}
+      />
     </main>
   );
 };

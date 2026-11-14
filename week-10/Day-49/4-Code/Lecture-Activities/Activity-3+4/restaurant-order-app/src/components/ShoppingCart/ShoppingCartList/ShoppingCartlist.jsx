@@ -3,9 +3,6 @@ import "./ShoppingCartlist.css";
 
 const ShoppingCartlist = ({
   cart,
-  total,
-  subtotal,
-  tax,
   removeItem,
   incrementQuantity,
   decrementQuantity,
@@ -34,26 +31,6 @@ const ShoppingCartlist = ({
                 key={cartItem.id}
               />
             ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="cart-summary-table-wrapper">
-        <table className="cart-summary-table">
-          <thead>
-            <tr>
-              <th>Cart Subtotal</th>
-              <th>Tax (8%)</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>${subtotal.toFixed(2)}</td>
-              <td>${tax.toFixed(2)}</td>
-              <td>${total.toFixed(2)}</td>
-            </tr>
           </tbody>
         </table>
       </div>
