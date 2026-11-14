@@ -1,0 +1,91 @@
+/* =========================================
+   SITE HEADER
+   ========================================= */
+.heading {
+  text-align: center;
+}
+.main-nav {
+  background-color: var(--deep-navy);
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 1rem 2rem;
+
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
+
+.main-nav a {
+  position: relative;
+
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  padding: 0.5rem 0.25rem;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--golden-sand);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   ACTIVE / FOCUS STATES
+   ========================================= */
+
+.main-nav a:focus-visible {
+  outline: 3px solid var(--golden-sand);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   LINK UNDERLINE EFFECT
+   ========================================= */
+
+.main-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--lobster-red-light);
+
+  transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* =========================================
+   RESPONSIVE NAVIGATION
+   ========================================= */
+
+@media (max-width: 600px) {
+  .main-nav {
+    gap: 1.25rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .main-nav a {
+    font-size: 0.95rem;
+  }
+}

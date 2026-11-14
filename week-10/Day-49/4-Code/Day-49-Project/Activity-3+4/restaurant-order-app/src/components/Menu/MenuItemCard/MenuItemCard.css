@@ -1,0 +1,183 @@
+/* =========================================
+   MENU ITEM CARD
+   ========================================= */
+
+.menu-item-card {
+  background-color: var(--white);
+
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =========================================
+   CARD HOVER
+   ========================================= */
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--lobster-red-light);
+
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   CARD CONTENT
+   ========================================= */
+
+.menu-item-card-content {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  padding: 1.5rem;
+}
+
+/* =========================================
+   CARD TOP ROW
+   ========================================= */
+
+.menu-item-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================
+   CATEGORY
+   ========================================= */
+
+.menu-item-category {
+  display: inline-block;
+
+  color: var(--seafoam-dark);
+  background-color: rgba(42, 157, 143, 0.1);
+
+  border-radius: 999px;
+
+  padding: 0.3rem 0.7rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   PRICE
+   ========================================= */
+
+.menu-item-price {
+  color: var(--lobster-red);
+
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   ITEM NAME
+   ========================================= */
+
+.menu-item-card h3 {
+  margin-bottom: 0.6rem;
+
+  color: var(--deep-navy);
+
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.menu-item-description {
+  flex-grow: 1;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--muted-text);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   ADD TO CART BUTTON
+   ========================================= */
+
+.menu-item-button {
+  width: 100%;
+
+  background-color: var(--lobster-red);
+  color: var(--white);
+
+  border: 2px solid var(--lobster-red);
+  border-radius: var(--border-radius-sm);
+
+  padding: 0.75rem 1rem;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.menu-item-button:hover {
+  background-color: var(--lobster-red-dark);
+  border-color: var(--lobster-red-dark);
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================================
+   BUTTON ACTIVE STATE
+   ========================================= */
+
+.menu-item-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   BUTTON FOCUS
+   ========================================= */
+
+.menu-item-button:focus-visible {
+  outline: 3px solid var(--golden-sand);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   MOBILE CARD
+   ========================================= */
+
+@media (max-width: 600px) {
+  .menu-item-card-content {
+    padding: 1.25rem;
+  }
+
+  .menu-item-card h3 {
+    font-size: 1.2rem;
+  }
+}

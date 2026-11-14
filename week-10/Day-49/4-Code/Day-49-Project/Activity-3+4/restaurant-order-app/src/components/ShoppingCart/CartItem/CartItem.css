@@ -1,0 +1,214 @@
+/* =========================================
+   CART ITEM ROW
+   ========================================= */
+
+.cart-item-row {
+  transition: background-color 0.2s ease;
+}
+
+.cart-item-row:hover {
+  background-color: #fff4cc;
+}
+
+/* =========================================
+   CART ITEM CELLS
+   ========================================= */
+
+.cart-item-row td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--dark-text);
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+/* =========================================
+   ITEM NAME
+   ========================================= */
+
+.cart-item-name {
+  color: var(--deep-navy);
+  font-weight: 700;
+}
+
+/* =========================================
+   PRICE
+   ========================================= */
+
+.cart-item-price {
+  color: var(--muted-text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================
+   QUANTITY CONTROLS
+   ========================================= */
+
+.cart-item-quantity {
+  color: var(--deep-navy);
+  font-weight: 700;
+}
+
+.quantity-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--border-light);
+  border-radius: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Plus and minus buttons */
+
+.quantity-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--deep-navy);
+  color: #ffffff;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background-color: var(--lobster-red);
+  transform: scale(1.08);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.quantity-controls button:active {
+  transform: scale(0.95);
+}
+
+/* Quantity number */
+
+.quantity-controls span {
+  min-width: 20px;
+  color: var(--deep-navy);
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* =========================================
+   ITEM SUBTOTAL
+   ========================================= */
+
+.cart-item-subtotal {
+  color: var(--lobster-red);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* =========================================
+   REMOVE ITEM BUTTON
+   ========================================= */
+
+.cart-item-remove {
+  text-align: center;
+}
+
+.cart-item-remove button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: transparent;
+  color: var(--lobster-red);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cart-item-remove button:hover {
+  background-color: rgba(220, 38, 38, 0.12);
+  color: #991b1b;
+  transform: scale(1.1);
+}
+
+.cart-item-remove button:active {
+  transform: scale(0.95);
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+.quantity-controls button:focus-visible,
+.cart-item-remove button:focus-visible {
+  outline: 3px solid var(--lobster-red);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   LAST ROW
+   ========================================= */
+
+.cart-item-row:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   RESPONSIVE CART ITEM
+   ========================================= */
+
+@media (max-width: 700px) {
+  .cart-item-row td {
+    padding: 0.85rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .quantity-controls {
+    gap: 0.4rem;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .quantity-controls button {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+  }
+
+  .quantity-controls span {
+    min-width: 16px;
+    font-size: 0.9rem;
+  }
+
+  .cart-item-remove button {
+    width: 30px;
+    height: 30px;
+  }
+}
