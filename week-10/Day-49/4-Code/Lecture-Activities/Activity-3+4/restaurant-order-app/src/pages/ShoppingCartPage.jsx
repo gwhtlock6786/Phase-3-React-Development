@@ -1,5 +1,6 @@
 import ShoppingCartlist from "../components/ShoppingCart/ShoppingCartList/ShoppingCartlist";
-
+import { useState } from "react";
+import TipCalculator from "../components/ShoppingCart/TipCalculator/TipCalculator";
 import "./ShoppingCartPage.css";
 
 const ShoppingCartPage = ({
@@ -11,6 +12,8 @@ const ShoppingCartPage = ({
   calculateTax,
   calculateTotal,
 }) => {
+  const [selectedTip, setSelectedTip] = useState(null);
+
   const subtotal = calculateSubtotal();
   const tax = calculateTax();
   const total = calculateTotal();
@@ -34,6 +37,8 @@ const ShoppingCartPage = ({
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
       />
+
+      <TipCalculator selectedTip={selectedTip} onTipChange={setSelectedTip} />
     </main>
   );
 };
