@@ -1,0 +1,66 @@
+/* =========================================
+   MENU ITEMS SECTION
+   ========================================= */
+
+.menu-items {
+  width: 100%;
+}
+
+/* =========================================
+   SECTION HEADER
+   ========================================= */
+
+.menu-items-header {
+  margin-bottom: 1.5rem;
+}
+
+.menu-items-header h2 {
+  margin-bottom: 0.35rem;
+
+  color: var(--deep-navy);
+  font-size: 1.75rem;
+}
+
+.menu-items-header p {
+  margin: 0;
+
+  color: var(--muted-text);
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   MENU GRID
+   ========================================= */
+
+.menu-items-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.5rem;
+}
+
+/* =========================================
+   RESPONSIVE GRID
+   ========================================= */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .menu-items-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .menu-items-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .menu-items-header h2 {
+    font-size: 1.5rem;
+  }
+}
