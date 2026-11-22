@@ -1,0 +1,153 @@
+/* =========================================
+   SHOPPING CART LIST
+   ========================================= */
+
+.shopping-cart-list {
+  width: 100%;
+}
+
+/* =========================================
+   TABLE WRAPPERS
+   ========================================= */
+
+.cart-items-table-wrapper,
+.cart-summary-table-wrapper {
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+/* =========================================
+   CART ITEMS TABLE
+   ========================================= */
+
+.cart-items-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+/* =========================================
+   TABLE HEADERS
+   ========================================= */
+
+.cart-items-table thead {
+  background-color: var(--deep-navy);
+  color: var(--white);
+}
+
+.cart-items-table th {
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   TABLE BODY
+   ========================================= */
+
+.cart-items-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--dark-text);
+}
+
+/* =========================================
+   TABLE ROWS
+   ========================================= */
+
+.cart-items-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   COLUMN ALIGNMENT
+   ========================================= */
+
+.cart-items-table th:nth-child(2),
+.cart-items-table th:nth-child(3),
+.cart-items-table th:nth-child(4),
+.cart-items-table td:nth-child(2),
+.cart-items-table td:nth-child(3),
+.cart-items-table td:nth-child(4) {
+  text-align: center;
+}
+
+/* =========================================
+   CART SUMMARY
+   ========================================= */
+
+.cart-summary-table-wrapper {
+  max-width: 700px;
+  margin: 1.5rem 0 0 auto;
+}
+
+.cart-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* =========================================
+   SUMMARY HEADER
+   ========================================= */
+
+.cart-summary-table thead {
+  background-color: var(--lobster-red);
+  color: var(--white);
+}
+
+.cart-summary-table th {
+  padding: 0.85rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   SUMMARY VALUES
+   ========================================= */
+
+.cart-summary-table td {
+  padding: 1.1rem 1rem;
+  color: var(--deep-navy);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* =========================================
+   TOTAL VALUE EMPHASIS
+   ========================================= */
+
+.cart-summary-table td:last-child {
+  color: var(--lobster-red);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   RESPONSIVE CART
+   ========================================= */
+
+@media (max-width: 700px) {
+  .cart-items-table-wrapper {
+    border-radius: var(--border-radius-md);
+  }
+
+  .cart-summary-table-wrapper {
+    max-width: 100%;
+  }
+
+  .cart-items-table th,
+  .cart-items-table td {
+    padding: 0.85rem 1rem;
+  }
+}

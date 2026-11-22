@@ -1,0 +1,119 @@
+/* =========================================
+   TIP CALCULATOR CONTAINER
+   ========================================= */
+
+.tip-calculator {
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   TIP CALCULATOR HEADER
+   ========================================= */
+
+.tip-calculator h3 {
+  margin-bottom: 0.5rem;
+  color: var(--deep-navy);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.tip-calculator p {
+  margin-bottom: 1.25rem;
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   TIP OPTIONS
+   ========================================= */
+
+.tip-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+/* =========================================
+   TIP OPTION BUTTONS
+   ========================================= */
+
+.tip-option {
+  padding: 0.85rem 1rem;
+
+  border: 2px solid var(--border-light);
+  border-radius: 10px;
+
+  background-color: #ffffff;
+  color: var(--deep-navy);
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+
+.tip-option:hover {
+  border-color: var(--lobster-red);
+  background-color: #fff4cc;
+  transform: translateY(-2px);
+}
+
+/* Selected Tip */
+
+.tip-option.active {
+  border-color: var(--lobster-red);
+  background-color: var(--deep-navy);
+  color: #ffffff;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Selected Tip Hover */
+
+.tip-option.active:hover {
+  background-color: var(--deep-navy);
+  border-color: var(--lobster-red);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+.tip-option:focus-visible {
+  outline: 3px solid var(--lobster-red);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE TIP CALCULATOR
+   ========================================= */
+
+@media (max-width: 500px) {
+  .tip-calculator {
+    padding: 1.15rem;
+  }
+
+  .tip-options {
+    gap: 0.5rem;
+  }
+
+  .tip-option {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
